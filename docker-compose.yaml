@@ -14,7 +14,7 @@ services:
     restart: unless-stopped
 
   shop:
-    image: sebi123q/sebi-online-schop-api:sha-88b5741
+    image: sebi123q/sebi-online-schop-api:sha-44ef7ac
     environment:
       SERVER_SERVLET_CONTEXT_PATH: /shop
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/shop_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&createDatabaseIfNotExist=true
