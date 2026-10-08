@@ -17,7 +17,7 @@ services:
     image: bogdandanielioan/online-shop-cloud-api:sha-e35db6f
     environment:
       SERVER_SERVLET_CONTEXT_PATH: /shop
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/shop_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/shop_cloud_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&createDatabaseIfNotExist=true
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       APP_SECURITY_JWT_SECRET: ${SHOP_JWT_SECRET_KEY}
@@ -30,7 +30,7 @@ services:
     image: bogdandanielioan/online-school-cloud-api:sha-90f415c
     environment:
       SERVER_SERVLET_CONTEXT_PATH: /school
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/school_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/school_cloud_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&createDatabaseIfNotExist=true
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       JWT_SECRET: ${SCHOOL_JWT_SECRET_KEY}
