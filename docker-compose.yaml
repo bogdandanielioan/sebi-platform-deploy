@@ -14,26 +14,26 @@ services:
     restart: unless-stopped
 
   shop:
-    image: sebi123q/sebi-online-schop-api:sha-44ef7ac
+    image: bogdandanielioan/online-shop-cloud-api:sha-e35db6f
     environment:
       SERVER_SERVLET_CONTEXT_PATH: /shop
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/shop_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&createDatabaseIfNotExist=true
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      JWT_SECRET_KEY: ${SHOP_JWT_SECRET_KEY}
+      APP_SECURITY_JWT_SECRET: ${SHOP_JWT_SECRET_KEY}
     depends_on:
       mysql:
         condition: service_healthy
     restart: unless-stopped
 
   school:
-    image: sebi123q/online-school-cloud-api:sha-3cf100d
+    image: bogdandanielioan/online-school-cloud-api:sha-90f415c
     environment:
       SERVER_SERVLET_CONTEXT_PATH: /school
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/school_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&createDatabaseIfNotExist=true
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      JWT_SECRET_KEY: ${SCHOOL_JWT_SECRET_KEY}
+      JWT_SECRET: ${SCHOOL_JWT_SECRET_KEY}
     depends_on:
       mysql:
         condition: service_healthy
