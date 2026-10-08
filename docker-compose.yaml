@@ -27,7 +27,7 @@ services:
     restart: unless-stopped
 
   school:
-    image: bogdandanielioan/online-school-cloud-api:sha-90f415c
+    image: bogdandanielioan/online-school-cloud-api:sha-5be8588
     environment:
       SERVER_SERVLET_CONTEXT_PATH: /school
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/school_cloud_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&createDatabaseIfNotExist=true
